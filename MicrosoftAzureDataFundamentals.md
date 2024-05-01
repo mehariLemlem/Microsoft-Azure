@@ -23,5 +23,18 @@
 
 ## **PaaS Services to implement Large-scale Analytical Store**
 - Azure Synapse Analytics ([Link](https://azure.microsoft.com/en-us/products/synapse-analytics/))
+  - Synapse Analytics is a great choice when you want to create a single, unified analytics solution on Azure.
+  - Azure Synapse Data Explorer
+  - Azure Synapse Studio: web-based interface that you can use to work with your Synapse Analytics workspace.
+  - A Synapse Analytics workspace requires two resource groups in your Azure subscription; one for resources you explicitly create, and another for managed resources used by the service. It also requires a Data Lake storage account in which to store data, scripts, and other artifacts.
 - Azure Databricks ([Link](https://azure.microsoft.com/en-us/products/databricks/))
+  - Built on **Apache Spark**, and offers native SQL capabilities as well as workload-optimized Spark clusters for data analytics and data science.
+  - 
 - Azure HDInsight ([Link](https://azure.microsoft.com/en-us/products/hdinsight/))
+  - Supports multiple open-source data analytics cluster types
+## **SaaS Service for scalable data analytics**
+- Microsoft Fabric ([Link](https://www.microsoft.com/en-us/microsoft-fabric))
+  - Fabric is a unified software-as-a-service (SaaS) offering, with all your data stored in a single open format in OneLake.
+  - **OneLake**: 
+    - OneLake is Fabric's lake-centric architecture that provides a single, integrated environment for data professionals and the business to collaborate on data projects.
+    - OneLake combines storage locations across different regions and clouds into a single logical lake, without moving or duplicating data.
