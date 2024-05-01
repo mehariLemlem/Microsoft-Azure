@@ -25,11 +25,10 @@
 - Azure Synapse Analytics ([Link](https://azure.microsoft.com/en-us/products/synapse-analytics/))
   - Synapse Analytics is a great choice when you want to create a single, unified analytics solution on Azure.
   - Azure Synapse Data Explorer
-  - Azure Synapse Studio: web-based interface that you can use to work with your Synapse Analytics workspace.
+  - **Azure Synapse Studio**: web-based interface that you can use to work with your Synapse Analytics workspace.
   - A Synapse Analytics workspace requires two resource groups in your Azure subscription; one for resources you explicitly create, and another for managed resources used by the service. It also requires a Data Lake storage account in which to store data, scripts, and other artifacts.
 - Azure Databricks ([Link](https://azure.microsoft.com/en-us/products/databricks/))
   - Built on **Apache Spark**, and offers native SQL capabilities as well as workload-optimized Spark clusters for data analytics and data science.
-  - 
 - Azure HDInsight ([Link](https://azure.microsoft.com/en-us/products/hdinsight/))
   - Supports multiple open-source data analytics cluster types
 ## **SaaS Service for scalable data analytics**
