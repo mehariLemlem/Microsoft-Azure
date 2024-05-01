@@ -1,6 +1,6 @@
 # Explore fundamentals of large-scale analytics
 ## *Data Warehouse vs. Data Lake vs. Data Lakehouse*
-[Google](https://www.striim.com/blog/data-warehouse-vs-data-lake-vs-data-lakehouse-an-overview/)
+[Link](https://www.striim.com/blog/data-warehouse-vs-data-lake-vs-data-lakehouse-an-overview/)
 
 ### **Conventional Data Warehouse:**
 - Involves copying data from transactional data stores into a relational database with a schema that's optimized for querying and building multidimensional models.
@@ -15,3 +15,8 @@
 
 #### **Comparison**
 ![image](img.png)
+
+## **Data Ingestion Pipelines**
+- Azure Data Factory ([Link](https://azure.microsoft.com/en-us/products/data-factory/))
+- Azure Synapse Analytics ([Link](https://azure.microsoft.com/en-us/products/synapse-analytics/))
+- Microsoft Fabric ([Link](https://learn.microsoft.com/en-us/fabric/data-factory/data-factory-overview))
