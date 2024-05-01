@@ -4,11 +4,11 @@
 
 ### **Conventional Data Warehouse:**
 - Involves copying data from transactional data stores into a relational database with a schema that's optimized for querying and building multidimensional models.
-
+- Schema, Star schema, Snowflake schema, Fact tables, Dimension tables
 ### **Data Lake:**
 - Highly flexible storage repository that stores large amounts of structured and unstructured data in its raw, original, and unformatted form.
-
-### **Data Lakehouse:**
+- File store, Schema-on-read, Spark/Hadoop, Delta Lake
+### **Data Lakehouse / Lake Database:**
 - Data lakehouse solutions are used with large volumes of data in multiple formats, which is batch loaded or captured in real-time streams and stored in a data lake from which distributed processing engines like Apache Spark are used to process it.
 - Data lakehouse is a new, big-data storage architecture that combines the best features of both data warehouses and data lakes. 
 - Data lakehouse enables a single repository for all your data (structured, semi-structured, and unstructured) while enabling best-in-class machine learning, business intelligence, and streaming capabilities.
@@ -20,3 +20,8 @@
 - Azure Data Factory ([Link](https://azure.microsoft.com/en-us/products/data-factory/))
 - Azure Synapse Analytics ([Link](https://azure.microsoft.com/en-us/products/synapse-analytics/))
 - Microsoft Fabric ([Link](https://learn.microsoft.com/en-us/fabric/data-factory/data-factory-overview))
+
+## **PaaS Services to implement Large-scale Analytical Store**
+- Azure Synapse Analytics ([Link](https://azure.microsoft.com/en-us/products/synapse-analytics/))
+- Azure Databricks ([Link](https://azure.microsoft.com/en-us/products/databricks/))
+- Azure HDInsight ([Link](https://azure.microsoft.com/en-us/products/hdinsight/))
