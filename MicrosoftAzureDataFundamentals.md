@@ -14,4 +14,4 @@
 - Data lakehouse enables a single repository for all your data (structured, semi-structured, and unstructured) while enabling best-in-class machine learning, business intelligence, and streaming capabilities.
 
 #### **Comparison**
-![image](![img.png](img.png))
+![image](img.png)
