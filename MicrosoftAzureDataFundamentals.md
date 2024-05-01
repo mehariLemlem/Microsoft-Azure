@@ -68,7 +68,18 @@
 
 ## Real-time analytics in Azure
 - **Azure Stream Analytics (PaaS)** [[Link](https://azure.microsoft.com/en-us/products/stream-analytics)]
+  - Stream Analysis Job
+  - Stream Analysis Cluster
+  - Exercise: ([Launch](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-05-stream-lab.html))
 - **Spark Structured Streaming (Open-source library)** [[Link](https://learn.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-structured-streaming-overview)]
+  - Spark Structured Streaming library
+  - Can be used with:
+    - Azure Synapse Analytics 
+    - Azure Databricks 
+    - Azure HDInsight
+  - Built on Dataframe
+  - Delta Lake ([Link](https://docs.delta.io/latest/delta-intro.html))
+  - **Exercise** ([Launch](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-05a-stream-with-spark.html))
 - **Azure Data Explorer (high-performance database and analytics service)** [[Link](https://learn.microsoft.com/en-us/azure/data-explorer/data-explorer-overview)]
 
 ## Sources for stream processing
