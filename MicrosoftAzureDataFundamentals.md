@@ -37,3 +37,28 @@
   - **OneLake**: 
     - OneLake is Fabric's lake-centric architecture that provides a single, integrated environment for data professionals and the business to collaborate on data projects.
     - OneLake combines storage locations across different regions and clouds into a single logical lake, without moving or duplicating data.
+
+# Explore fundamentals of real-time analytics
+### Data Processing:
+- Conversion of **raw data** to **meaningful information** through a **process**.
+### Batch Processing:
+- Group of data based on:
+  - Scheduled time interval (Hourly, Daily, Monthly, ...)
+  - Certain amount of data (Size)
+  - Event result
+- Advantage:
+  - Large volume at convenient time
+  - Scheduled execution (effective resource utilization)
+- Disadvantage:
+  - Delay
+  - Pron to minor errors
+### Stream Processing:
+- Ideal for time-critical operations
+- Near real-time processing
+- New, dynamic data is generated on a continual basis.
+
+### Comparison
+- **Data scope**: Batch processing can process all the data in the dataset. Stream processing typically only has access to the most recent data received, or within a rolling time window (the last 30 seconds, for example).
+- **Data size**: Batch processing is suitable for handling large datasets efficiently. Stream processing is intended for individual records or micro batches consisting of few records.
+- **Performance**: Latency is the time taken for the data to be received and processed. The latency for batch processing is typically a few hours. Stream processing typically occurs immediately, with latency in the order of seconds or milliseconds.
+- **Analysis**: You typically use batch processing to perform complex analytics. Stream processing is used for simple response functions, aggregates, or calculations such as rolling averages.
