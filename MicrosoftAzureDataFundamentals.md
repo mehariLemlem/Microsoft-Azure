@@ -12,3 +12,6 @@
 - Data lakehouse solutions are used with large volumes of data in multiple formats, which is batch loaded or captured in real-time streams and stored in a data lake from which distributed processing engines like Apache Spark are used to process it.
 - Data lakehouse is a new, big-data storage architecture that combines the best features of both data warehouses and data lakes. 
 - Data lakehouse enables a single repository for all your data (structured, semi-structured, and unstructured) while enabling best-in-class machine learning, business intelligence, and streaming capabilities.
+
+#### **Comparison**
+![image](![img.png](img.png))
