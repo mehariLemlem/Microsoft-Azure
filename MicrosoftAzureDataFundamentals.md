@@ -96,4 +96,23 @@
 
 # Explore fundamentals of data visualization
 
-### Business Intelligence (BI) ([Link](https://powerbi.microsoft.com/en-us/what-is-business-intelligence/))
+### Business Intelligence (BI) [[Link](https://powerbi.microsoft.com/en-us/what-is-business-intelligence/)]
+## Microsoft Power BI ([Link1](https://learn.microsoft.com/en-us/power-bi/fundamentals/power-bi-overview)), ([Link2](https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-getting-started)), ([Link3](https://learn.microsoft.com/en-us/training/paths/model-data-power-bi/))
+- **Power BI Desktop**
+- **Power BI Service**
+- **Power BI Phone App**
+#### Data Modeling Concepts
+- **Analytical Models**
+- **Measures**
+- **Dimensions**
+- **Multidimensional structure (Cube)**
+- **Schema (Star/Snowflake)**
+- **Attribute Hierarchies(Drill-up/Drill-down)**
+#### Data Visualization
+- **Tables and Text**
+- **Bar and column charts**
+- **Line Charts**
+- **Pie Charts**
+- **Scatter Plots**
+- **Maps**
+#### Exercise ([Launch](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-pbi-06-lab.html))
