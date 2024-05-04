@@ -96,10 +96,13 @@
   - Data Manipulation Language (DML)
     - SELECT, INSERT, UPDATE, DELETE
 ### Database Objects
-- View
-- Stored Procedure
-- Index
+- View ([Link](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-view-transact-sql?view=sql-server-ver16)), ([Link2](https://learn.microsoft.com/en-us/sql/relational-databases/views/views?view=sql-server-ver16))
+- Stored Procedure ([Link](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-procedure-transact-sql?view=sql-server-ver16&source=recommendations)), ([Link2](https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver16))
+- Index ([Link](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-index-transact-sql?view=sql-server-ver16)), ([Link2](https://learn.microsoft.com/en-us/sql/relational-databases/indexes/indexes?view=sql-server-ver16))
   - ```CREATE INDEX <index_name> ON <table_name>(<column_name>) ```
+
+# Explore relational database services in Azure
+![CompareSQLServices](![img_1.png](img_1.png))
 
 # Explore fundamentals of large-scale analytics
 ## *Data Warehouse vs. Data Lake vs. Data Lakehouse*
