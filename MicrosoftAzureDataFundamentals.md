@@ -57,11 +57,11 @@
   - Azure Database for MySQL
   - Azure Database for MariaDB
   - Azure Database for PostgreSQL
-- **Azure Cosmos DB** (NoSQL)
+- **Azure Cosmos DB** (NoSQL) -- ([Link](https://learn.microsoft.com/en-us/azure/cosmos-db/))
   - Manage JSON, key-value pairs, column-families, Graphs
 - **Azure Storage**
   - Blob containers, File shares, Tables (key-value), host data lakes
-- **Azure Data Factory**
+- **Azure Data Factory** ([Link](https://learn.microsoft.com/en-us/azure/data-factory/introduction))
   - ETL, Data pipelines
 - **Azure Synapse Analytics** ([Link](https://learn.microsoft.com/en-us/azure/synapse-analytics/overview-what-is))
   - Unified PaaS solution for data analytics
@@ -69,7 +69,12 @@
 - **Azure Databricks** ([Link](https://learn.microsoft.com/en-us/azure/databricks/introduction/))
 - **Azure HDInsight** ([Link](https://learn.microsoft.com/en-us/azure/hdinsight/hdinsight-overview))
   - **Azure hosted cluster for:** Apache Spark, Apache hadoop, Apache HBase, Apache Kafka
-
+- **Azure Stream Analytics** ([Link](https://learn.microsoft.com/en-us/azure/stream-analytics/stream-analytics-introduction))
+- **Azure Data Explorer** ([Link](https://learn.microsoft.com/en-us/azure/data-explorer/data-explorer-overview))
+- **Microsoft Purview** ([Link](https://learn.microsoft.com/en-us/purview/purview))
+  - Data governance and discoverability
+- **Microsoft Fabric** ([Link](https://learn.microsoft.com/en-us/fabric/get-started/microsoft-fabric-overview))
+  - Unified SaaS analytics platform
 
 # Explore fundamentals of large-scale analytics
 ## *Data Warehouse vs. Data Lake vs. Data Lakehouse*
