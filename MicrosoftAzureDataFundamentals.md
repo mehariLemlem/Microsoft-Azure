@@ -75,6 +75,31 @@
   - Data governance and discoverability
 - **Microsoft Fabric** ([Link](https://learn.microsoft.com/en-us/fabric/get-started/microsoft-fabric-overview))
   - Unified SaaS analytics platform
+# Explore fundamental relational data concepts
+
+### Relational Data
+- Tables, Rows, Columns, Data Types, Pk, Fk, NULL
+### Normalization (Simple definition)
+1. Separate each entity into its own table. 
+2. Separate each discrete attribute into its own column. 
+3. Uniquely identify each entity instance (row) using a primary key. 
+4. Use foreign key columns to link related entities.
+
+### SQL
+- Standardized by ANSI (1986) and ISO (1987)
+- Dialects (Proprietary extensions) of SQL (T-SQL, PL/SQL, pgSQL)
+- **SQL Statement Types**
+  - Data Definition Language (DDL)
+    - CREATE, ALTER, DROP, RENAME
+  - Data Control Language (DCL)
+    - GRANT, DENY, REVOKE
+  - Data Manipulation Language (DML)
+    - SELECT, INSERT, UPDATE, DELETE
+### Database Objects
+- View
+- Stored Procedure
+- Index
+  - ```CREATE INDEX <index_name> ON <table_name>(<column_name>) ```
 
 # Explore fundamentals of large-scale analytics
 ## *Data Warehouse vs. Data Lake vs. Data Lakehouse*
