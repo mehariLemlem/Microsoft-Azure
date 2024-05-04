@@ -1,3 +1,76 @@
+# Explore core data concepts
+**Data structure (Entity, Attribute)**
+## **Data classification**
+- **Structured**
+  - Fixed schema
+  - Mostly tabular
+  - Relational model
+- **Semi-structured**
+  - Has some structure
+  - JSON
+- **Unstructured**
+  - Has no specific structure
+  - Documents, images, audio & video data, binary files
+## **Data Stores**
+- **File stores**
+  - Delimited text files (CSV, TSV, fixed-width)
+  - JavaScript Object Notation (JSON) --- {Objects}, [Collections], Attributes --> name:value separated by comma
+  - Extensible Markup Language (XML) --- <tags> --> define elements and attributes
+  - Binary Large Object (Blob) --- Images, Video, Audio, Application-specific documents
+  - Optimized file formats: Avro (Apache), ORC, Parquet (Cloudera & Twitter)
+
+- **Databases**
+  - Relational: Structured, Normalized, Pk, 
+  - Non-relational (NoSQL): 
+    - key-value databases
+    - Document databases
+    - Column family databases
+    - Graph databases: Nodes, Edges
+## Transactional Data Processing
+- Online Transactional Processing (OLTP)
+- Line of business (LOB) applications
+- ACID semantics:
+  - Atomicity
+  - Consistency
+  - Isolation
+  - Durability
+## Analytical Data Processing
+- ETL
+- Data warehouse, Data lake, Data lakehouse
+- OLAP model (Cube) --> Measures, Dimensions
+- Visualization and Dashboards
+
+# Explore data Roles and Services
+## Job Roles
+- **Database Administrators**
+  - Manage databases, data access permissions, data security, Backup/Restore
+- **Data Engineers**
+  - Manage infrastructure, integration processes, pipeline implementation 
+- **Data Analysts**
+  - Explore and analyze data, Data visualization
+## Data Services
+- **Azure SQL** ([Link](https://learn.microsoft.com/en-us/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview?view=azuresql))
+  - Azure SQL Database
+  - Azure SQL managed Instance
+  - Azure SQL VM
+- **Azure Database for open-source relational databases**
+  - Azure Database for MySQL
+  - Azure Database for MariaDB
+  - Azure Database for PostgreSQL
+- **Azure Cosmos DB** (NoSQL)
+  - Manage JSON, key-value pairs, column-families, Graphs
+- **Azure Storage**
+  - Blob containers, File shares, Tables (key-value), host data lakes
+- **Azure Data Factory**
+  - ETL, Data pipelines
+- **Azure Synapse Analytics** ([Link](https://learn.microsoft.com/en-us/azure/synapse-analytics/overview-what-is))
+  - Unified PaaS solution for data analytics
+  - **Capabilities:** Pipelines, SQL, Apache Spark, Azure Synapse Data Explore (KQL)
+- **Azure Databricks** ([Link](https://learn.microsoft.com/en-us/azure/databricks/introduction/))
+- **Azure HDInsight** ([Link](https://learn.microsoft.com/en-us/azure/hdinsight/hdinsight-overview))
+  - **Azure hosted cluster for:** Apache Spark, Apache hadoop, Apache HBase, Apache Kafka
+
+
 # Explore fundamentals of large-scale analytics
 ## *Data Warehouse vs. Data Lake vs. Data Lakehouse*
 [Link](https://www.striim.com/blog/data-warehouse-vs-data-lake-vs-data-lakehouse-an-overview/)
