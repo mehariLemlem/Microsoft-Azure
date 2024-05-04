@@ -102,7 +102,13 @@
   - ```CREATE INDEX <index_name> ON <table_name>(<column_name>) ```
 
 # Explore relational database services in Azure
-![CompareSQLServices](![img_1.png](img_1.png))
+- [SQL Server on Azure VM](https://learn.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview?view=azuresql)
+- [Azure SQL Managed Instance](https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview?view=azuresql)
+- [Azure SQL Database](https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview?view=azuresql)
+- [Azure SQL Edge](https://learn.microsoft.com/en-us/azure/azure-sql-edge/overview)
+
+### Compare Azure SQL Services
+![CompareSQLServices](CompareSQLServices.png)
 
 # Explore fundamentals of large-scale analytics
 ## *Data Warehouse vs. Data Lake vs. Data Lakehouse*
