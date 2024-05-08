@@ -113,13 +113,39 @@
 
 ### Azure services for open-source databases
 - [Azure database for MySQL](https://learn.microsoft.com/en-us/azure/mysql/)
+  - Leading open source relational database for Linux, Apache, MySQL, and PHP (LAMP) stack apps.
+  - 
 - [Azure Database for MariaDB](https://learn.microsoft.com/en-us/azure/mariadb/)
+  - One notable feature of MariaDB is its built-in support for temporal data.
+  - MariaDB offers compatibility with Oracle Database.
+  - A table can hold several versions of data, enabling an application to query the data as it appeared at some point in the past.
+  
 - [Azure Database for PostgreSQL](https://learn.microsoft.com/en-us/azure/postgresql/)
   - Hybrid relational-object database
   - Also enables you to store custom data types, with their own non-relational properties
   - Ability to store and manipulate geometric data, such as lines, circles, and polygons.
   - Deployment Options: ![AzurePostgreSQLDeploymentOption.png](img_1.png)
-  - 
+  
+# Explore Azure Storage for non-relational data
+- [Azure blob storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)
+  - Store massive amounts of unstructured data as binary large objects (blobs)
+  - A container provides a convenient way of grouping related blobs together. You control who can read and write blobs inside a container at the container level.
+  - Folders are purely virtual, and you can't perform folder-level operations to control access or perform bulk operations.
+  - Azure Blob Storage supports three different types of blob:
+    - **Block Blobs**
+      - Block blobs are best used to store discrete, large, binary objects that change infrequently.
+    - **Page Blobs**
+      - Azure uses page blobs to implement virtual disk storage for virtual machines.
+    - **Append Blobs**
+  - Blob storage provides three access tiers:
+    - **Hot Tier (Default)**
+    - **Cool Tier**
+    - **Archive Tier**
+- [Azure DataLake Storage Gen2](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction)
+- Enable you to take advantage of the scalability of blob storage and the cost-control of storage tiers, combined with the hierarchical file system capabilities and compatibility with major analytics systems of Azure Data Lake Store.
+- To create an **Azure Data Lake Store Gen2** files system, you must enable the **Hierarchical Namespace** option of an Azure Storage account.
+- Upgrading is a one-way process – after upgrading a storage account to support a hierarchical namespace for blob storage, you can’t revert it to a flat namespace.
+- 
 
 # Explore fundamentals of large-scale analytics
 ## *Data Warehouse vs. Data Lake vs. Data Lakehouse*
