@@ -115,7 +115,11 @@
 - [Azure database for MySQL](https://learn.microsoft.com/en-us/azure/mysql/)
 - [Azure Database for MariaDB](https://learn.microsoft.com/en-us/azure/mariadb/)
 - [Azure Database for PostgreSQL](https://learn.microsoft.com/en-us/azure/postgresql/)
-- 
+  - Hybrid relational-object database
+  - Also enables you to store custom data types, with their own non-relational properties
+  - Ability to store and manipulate geometric data, such as lines, circles, and polygons.
+  - Deployment Options: ![AzurePostgreSQLDeploymentOption.png](img_1.png)
+  - 
 
 # Explore fundamentals of large-scale analytics
 ## *Data Warehouse vs. Data Lake vs. Data Lakehouse*
