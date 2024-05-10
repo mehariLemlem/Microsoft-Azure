@@ -161,7 +161,7 @@
     - Partitions are independent from each other, and can grow or shrink as rows are added to, or removed from, a partition. A table can contain any number of partitions. 
     - When you search for data, you can include the partition key in the search criteria. This helps to narrow down the volume of data to be examined, and improves performance by reducing the amount of I/O (input and output operations, or reads and writes) needed to locate the data.
 - Select an Azure data store for your Application
-  - ![Data Store Candidate](img_2.png)
+  - ![Data Store Candidate](DataStoreCandidate.png)
 
 # Explore fundamentals of [Azure Cosmos DB](https://learn.microsoft.com/en-us/training/modules/explore-non-relational-data-stores-azure/)
 - Azure Cosmos DB is a highly scalable cloud database service for NoSQL data.
