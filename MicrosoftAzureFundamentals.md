@@ -71,3 +71,6 @@
 - Infrastructure as a code
 - While similar to an ARM template, which is written in JSON, Bicep files tend to use a simpler, more concise style.
 
+
+# [Describe monitoring tools in Azure](https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/)
+
