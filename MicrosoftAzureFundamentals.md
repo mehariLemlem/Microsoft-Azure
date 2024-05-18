@@ -37,3 +37,37 @@
 ## [Azure Cloud Shell](https://learn.microsoft.com/en-us/azure/cloud-shell/overview)
 - Azure Cloud Shell is a browser-based shell tool that allows you to create, configure, and manage Azure resources using a shell. 
 - Azure Cloud Shell support both Azure PowerShell and the Azure Command Line Interface (CLI), which is a Bash shell.
+
+## [Azure PowerShell](https://learn.microsoft.com/en-us/powershell/azure/what-is-azure-powershell?view=azps-11.6.0)
+- Azure PowerShell is a shell with which developers, DevOps, and IT professionals can run commands called command-lets (cmdlets). These commands call the Azure REST API to perform management tasks in Azure. Cmdlets can be run independently to handle one-off changes, or they may be combined to help orchestrate complex actions such as:
+  - The routine setup, teardown, and maintenance of a single resource or multiple connected resources.
+  - The deployment of an entire infrastructure, which might contain dozens or hundreds of resources, from imperative code.
+
+## [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/what-is-azure-cli)
+- The Azure CLI is functionally equivalent to Azure PowerShell, with the primary difference being the syntax of commands. While Azure PowerShell uses PowerShell commands, the Azure CLI uses Bash commands.
+- Due to the similarities in capabilities and access between Azure PowerShell and the Bash based Azure CLI, it mainly comes down to which language you’re most familiar with.
+
+## [Azure Arc](https://learn.microsoft.com/en-us/azure/azure-arc/overview)
+- Azure Arc simplifies governance and management by delivering a consistent multi-cloud and on-premises management platform.
+
+## [Azure Resource Manager (ARM)](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview)
+- Azure Resource Manager (ARM) is the deployment and management service for Azure. 
+- It provides a management layer that enables you to create, update, and delete resources in your Azure account. 
+- Anytime you do anything with your Azure resources, ARM is involved.
+- When a user sends a request from any of the Azure tools, APIs, or SDKs, ARM receives the request. ARM authenticates and authorizes the request. Then, ARM sends the request to the Azure service, which takes the requested action. You see consistent results and capabilities in all the different tools because all requests are handled through the same API.
+- With Azure Resource Manager, you can:
+  - Manage your infrastructure through declarative templates rather than scripts. A Resource Manager template is a JSON file that defines what you want to deploy to Azure. 
+  - Deploy, manage, and monitor all the resources for your solution as a group, rather than handling these resources individually. 
+  - Re-deploy your solution throughout the development life-cycle and have confidence your resources are deployed in a consistent state. 
+  - Define the dependencies between resources, so they're deployed in the correct order. 
+  - Apply access control to all services because RBAC is natively integrated into the management platform. 
+  - Apply tags to resources to logically organize all the resources in your subscription. 
+  - Clarify your organization's billing by viewing costs for a group of resources that share the same tag.
+### [ARM templates](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/)
+- Infrastructure as a code
+- Declarative JSON format
+
+### [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/)
+- Infrastructure as a code
+- While similar to an ARM template, which is written in JSON, Bicep files tend to use a simpler, more concise style.
+
