@@ -90,5 +90,7 @@
 ## [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 - Azure Monitor is a platform for collecting data on your resources, analyzing that data, visualizing the information, and even acting on the results.
 - Azure Monitor can monitor Azure resources, your on-premises resources, and even multi-cloud resources like virtual machines hosted with a different cloud provider.
-- 
+- [Azure Log Analytics](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-overview)
+- [Azure Monitor Alerts](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview)
+- [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview)
 
