@@ -2,6 +2,8 @@
 ## [Shared Responsibility Model](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility)
 ![SharedResponsibilityModel](SharedResponsibilityModel.png)
 
+## [Cloud Models](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-are-private-public-hybrid-clouds/)
+![CloudModels](img_2.png)
 
 
 
