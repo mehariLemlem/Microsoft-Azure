@@ -1,6 +1,6 @@
 # Describe cloud computing
 ## [Shared Responsibility Model](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility)
-![SharedResponsibilityModel](img_2.png)
+![SharedResponsibilityModel](SharedResponsibilityModel.png)
 
 
 
