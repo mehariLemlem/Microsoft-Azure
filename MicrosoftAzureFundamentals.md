@@ -1,3 +1,10 @@
+# Describe cloud computing
+## [Shared Responsibility Model](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility)
+![SharedResponsibilityModel](img_2.png)
+
+
+
+
 # [Describe features and tools in Azure for governance and compliance](https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/)
 [Microsoft Purview](https://learn.microsoft.com/en-us/purview/governance-solutions-overview)
 - Microsoft Purview's data governance solutions create one place for you to manage your on-premises, multicloud, and software-as-a-service (SaaS) data.
