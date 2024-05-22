@@ -3,8 +3,26 @@
 ![SharedResponsibilityModel](SharedResponsibilityModel.png)
 
 ## [Cloud Models](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-are-private-public-hybrid-clouds/)
-![CloudModels](img_2.png)
+- [Private Cloud](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-private-cloud)
+- [Public Cloud](https://cloud.google.com/learn/what-is-public-cloud)
+- [Hybrid Cloud](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-hybrid-cloud-computing/)
 
+![CloudModels](CloudModels.png)
+
+### [Multi-cloud](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-multi-cloud)
+### [Azure Arc](https://learn.microsoft.com/en-us/azure/azure-arc/)
+### [Azure VMware Solution](https://learn.microsoft.com/en-us/azure/azure-vmware/introduction)
+
+## [Consumption-based model](https://www.techtarget.com/searchcloudcomputing/definition/consumption-based-pricing-model)
+- **[Capital expenditure (CapEx)](https://www.azureguru.org/capex-vs-opex/)**
+- **[Operational expenditure (OpEx)](https://www.azureguru.org/capex-vs-opex/)**
+- Advantages of Consumption-based model:
+  - No upfront costs. 
+  - No need to purchase and manage costly infrastructure that users might not use to its fullest potential. 
+  - The ability to pay for more resources when they're needed. 
+  - The ability to stop paying for resources that are no longer needed.
+- [Pay-as-you-go pricing model](https://learn.microsoft.com/en-us/power-platform/admin/pay-as-you-go-overview)
+- 
 
 
 # [Describe features and tools in Azure for governance and compliance](https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/)
