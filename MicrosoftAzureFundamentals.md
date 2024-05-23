@@ -1,4 +1,4 @@
-# Describe cloud computing
+# [Describe cloud computing](https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/)
 ## [Shared Responsibility Model](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility)
 ![SharedResponsibilityModel](SharedResponsibilityModel.png)
 
@@ -22,7 +22,42 @@
   - The ability to pay for more resources when they're needed. 
   - The ability to stop paying for resources that are no longer needed.
 - [Pay-as-you-go pricing model](https://learn.microsoft.com/en-us/power-platform/admin/pay-as-you-go-overview)
-- 
+
+# [Describe the benefits of using cloud services](https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/)
+## [High availability](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/infrastructure/iaas-high-availability-disaster-recovery)
+- [SLAs](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services)
+- Available when needed
+## [Scalability](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/scaling-out-vs-scaling-up/)
+- Vertical Scaling
+- Horizontal Scaling
+## [Reliability](https://learn.microsoft.com/en-us/azure/reliability/overview)
+## Predictability
+- Performance Predictability
+  - Autoscaling, load balancing, high availability 
+- Cost Predictability
+  -  Total Cost of Ownership (TCO), Pricing Calculator
+## Security and Governance
+## Manageability
+
+# [Describe cloud service types](https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/)
+[Shared Responsibility Model](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility)
+![SharedResponsibilityModel](SharedResponsibilityModel.png)
+- [IaaS](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-iaas/)
+- [PaaS](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-paas/)
+- [SaaS](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-saas/)
+
+# [Describe the core architectural components of Azure](https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/)
+- [Azure accounts](https://learn.microsoft.com/en-us/dotnet/azure/create-azure-account)
+  - ![img_2.png](img_2.png)
+
+
+
+
+
+
+
+
+
 
 
 # [Describe features and tools in Azure for governance and compliance](https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/)
