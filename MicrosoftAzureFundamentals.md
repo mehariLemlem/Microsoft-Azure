@@ -48,9 +48,47 @@
 
 # [Describe the core architectural components of Azure](https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/)
 - [Azure accounts](https://learn.microsoft.com/en-us/dotnet/azure/create-azure-account)
-  - ![img_2.png](img_2.png)
+  - ![AzureAccount](AzureAccount.png)
 
+### [Exercise - Explore the Learn sandbox](https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/4-exercise-explore-learn-sandbox)
+- [Azure Cloud Shell](https://learn.microsoft.com/en-us/azure/cloud-shell/overview)
+  - **PowerShell** command line interface (CLI) mode --> Default
+  - Most Azure specific commands will start with the letters **az**.
+  - If you’re more familiar with **BASH**, you can use BASH command instead by shifting to the BASH CLI.
+  - To switch between Bash and PowerShell CLI use **bash** and **pwsh** commands.
+  - Another way to interact is using the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/get-started-tutorial-0-before-you-begin) interactive mode. This changes CLI behavior to more closely resemble an integrated development environment (IDE).
+  -  Interactive mode provides autocompletion, command descriptions, and even examples. If you’re unfamiliar with BASH and PowerShell, but want to use the command line, interactive mode may help you.
+  - To enter and leave **Interactive Mode / Azure CLI** use **az interactive** and **exit** respectively. 
+- [Azure Portal](https://learn.microsoft.com/en-us/azure/azure-portal/azure-portal-overview) 
+  - Web interface
 
+## [Azure physical infrastructure](https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/5-describe-azure-physical-infrastructure)
+- [Azure Global Infrastructure](https://azure.microsoft.com/en-in/explore/global-infrastructure/)
+- [Datacenter](https://datacenters.microsoft.com/)
+- [Regions](https://learn.microsoft.com/en-us/azure/virtual-machines/regions)
+  - Some services or virtual machine (VM) features are only available in certain regions, such as specific VM sizes or storage types. 
+  - There are also some global Azure services that don't require you to select a particular region, such as Microsoft Entra ID, Azure Traffic Manager, and Azure DNS.
+- [Availability Zones](https://learn.microsoft.com/en-us/azure/reliability/availability-zones-overview?tabs=azure-cli)
+  - Physically separate datacenters within an Azure region.
+  - Equipped with independent power, cooling, and networking.
+  - Set up to be an isolation boundary.
+  - **To ensure resiliency, a minimum of three separate availability zones are present in all availability zone-enabled regions. However, not all Azure Regions currently support availability zones.**
+  - Availability zones are primarily for VMs, managed disks, load balancers, and SQL databases.
+  - Azure services that support availability zones fall into three categories:
+    - **Zonal services**: You pin the resource to a specific zone (for example, VMs, managed disks, IP addresses). 
+    - **Zone-redundant services**: The platform replicates automatically across zones (for example, zone-redundant storage, SQL Database). 
+    - **Non-regional services**: Services are always available from Azure geographies and are resilient to zone-wide outages as well as region-wide outages.
+- [Region pairs](https://learn.microsoft.com/en-us/azure/reliability/cross-region-replication-azure)
+  - Most Azure regions are paired with another region within the same geography (such as US, Europe, or Asia) at least 300 miles away.
+  -  This approach allows for the replication of resources across a geography that helps reduce the likelihood of interruptions because of events such as natural disasters, civil unrest, power outages, or physical network outages that affect an entire region.
+  - Not all Azure services automatically replicate data or automatically fall back from a failed region to cross-replicate to another enabled region. In these scenarios, recovery and replication must be configured by the customer.
+  - **Most regions are paired in two directions, meaning they are the backup for the region that provides a backup for them (West US and East US back each other up). However, some regions, such as West India and Brazil South, are paired in only one direction. In a one-direction pairing, the Primary region does not provide backup for its secondary region. So, even though West India’s secondary region is South India, South India does not rely on West India. West India's secondary region is South India, but South India's secondary region is Central India. Brazil South is unique because it's paired with a region outside of its geography. Brazil South's secondary region is South Central US. The secondary region of South Central US isn't Brazil South.**
+- [Sovereign Regions](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/regions)
+  - Sovereign regions are instances of Azure that are isolated from the main instance of Azure. 
+  - You may need to use a sovereign region for compliance or legal purposes.
+  - Azure sovereign regions include:
+    - US DoD Central, US Gov Virginia, US Gov Iowa and more: These regions are physical and logical network-isolated instances of Azure for U.S. government agencies and partners. These datacenters are operated by screened U.S. personnel and include additional compliance certifications. 
+    - China East, China North, and more: These regions are available through a unique partnership between Microsoft and 21Vianet, whereby Microsoft doesn't directly maintain the datacenters.
 
 
 
