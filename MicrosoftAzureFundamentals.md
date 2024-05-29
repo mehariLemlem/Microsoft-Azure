@@ -89,12 +89,111 @@
   - Azure sovereign regions include:
     - US DoD Central, US Gov Virginia, US Gov Iowa and more: These regions are physical and logical network-isolated instances of Azure for U.S. government agencies and partners. These datacenters are operated by screened U.S. personnel and include additional compliance certifications. 
     - China East, China North, and more: These regions are available through a unique partnership between Microsoft and 21Vianet, whereby Microsoft doesn't directly maintain the datacenters.
+## [Azure management infrastructure]()
+- [Azure Management Scop](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview)![AzureManagementScop.png](AzureManagementScop.png)
+- [Azure resources](https://azure.microsoft.com/en-in/resources/)
+  - Anything you create, provision, deploy, etc. is a resource. Virtual Machines (VMs), virtual networks, databases, cognitive services, etc. are all considered resources within Azure.
+- [Resource Group](https://www.c-sharpcorner.com/blogs/what-is-azure-resource-and-resource-group)
+  - While a resource group can contain many resources, a single resource can only be in one resource group at a time.
+  - Resource groups can't be nested
+  - When you apply an action to a resource group, that action will apply to all the resources within the resource group.
+  - There aren’t hard rules about how you use resource groups, so consider how to set up your resource groups to maximize their usefulness for you.
+- [Azure subscriptions](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/fundamental-concepts)
+  - Subscriptions are a unit of management, billing, and scale.
+  - A subscription provides you with authenticated and authorized access to Azure products and services.
+  - In a multi-subscription account, you can use the subscriptions to configure different billing models and apply different access-management policies.
+  - There are two types of subscription boundaries that you can use:
+    - **Billing boundary**: This subscription type determines how an Azure account is billed for using Azure. You can create multiple subscriptions for different types of billing requirements. Azure generates separate billing reports and invoices for each subscription so that you can organize and manage costs. 
+    - **Access control boundary**: Azure applies access-management policies at the subscription level, and you can create separate subscriptions to reflect different organizational structures. An example is that within a business, you have different departments to which you apply distinct Azure subscription policies. This billing model allows you to manage and control access to the resources that users provision with specific subscriptions.
+- [Azure management groups](https://learn.microsoft.com/en-us/azure/governance/management-groups/overview)
+  -  You organize subscriptions into containers called management groups and apply governance conditions to the management groups.
+  - All subscriptions within a management group automatically inherit the conditions applied to the management group, the same way that resource groups inherit settings from subscriptions and resources inherit from resource groups. 
+  - Management groups can be nested.
+  - Important facts about management groups:
+    - 10,000 management groups can be supported in a single directory. 
+    - A management group tree can support up to six levels of depth. This limit doesn't include the root level or the subscription level. 
+    - Each management group and subscription can support only one parent.
+![ManagementHierarchy](ManagementHierarchy.png)
 
+# [Describe Azure compute and networking services](https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/)
+## [Azure virtual machines](https://learn.microsoft.com/en-us/azure/virtual-machines/overview)
+- An **image** is a template used to create a VM and may already include an OS and other software, like development tools or web hosting environments.
+### [Virtual machine scale sets](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/?source=recommendations)
+- Group of identical, load-balanced VMs.
+- Scale sets allow you to centrally manage, configure, and update a large number of VMs in minutes.
+- The number of VM instances can automatically increase or decrease in response to demand, or you can set it to scale based on a defined schedule. 
+- Virtual machine scale sets also automatically deploy a **load balancer** to make sure that your resources are being used efficiently.
+- With virtual machine scale sets, you can build large-scale services for areas such as compute, big data, and container workloads.
 
+### [Virtual machine availability sets](https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overview)
+- Availability sets are designed to ensure that VMs stagger updates and have varied power and network connectivity, preventing you from losing all your VMs with a single network or power failure.
+- Availability sets do this by grouping VMs in two ways:
+  - **Update domain**: The update domain groups VMs that can be rebooted at the same time. This allows you to apply updates while knowing that only one update domain grouping will be offline at a time. All of the machines in one update domain will be updated. An update group going through the update process is given a 30-minute time to recover before maintenance on the next update domain starts. 
+  - **Fault domain**: The fault domain groups your VMs by common power source and network switch. By default, an availability set will split your VMs across up to three fault domains. This helps protect against a physical power or networking failure by having VMs in different fault domains (thus being connected to different power and networking resources).
+- There’s no additional cost for configuring an availability set
 
+## [Exercise - Create an Azure virtual machine](https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/3-exercise-create-azure-virtual-machine)
+## [Azure virtual desktop](https://learn.microsoft.com/en-us/azure/virtual-desktop/overview)
+- Azure Virtual Desktop is a desktop and application virtualization service that runs on the cloud. 
+- It enables you to use a cloud-hosted version of Windows from any location. 
+- Azure Virtual Desktop works across devices and operating systems, and works with apps that you can use to access remote desktops or most modern browsers.
 
+## [Azure containers](https://learn.microsoft.com/en-us/azure/container-apps/start-containers)
+- You can run multiple containers on a single physical or virtual host. 
+- Unlike virtual machines, you don't manage the operating system for a container. 
+- Virtual machines appear to be an instance of an operating system that you can connect to and manage. Containers are lightweight and designed to be created, scaled out, and stopped dynamically.
+- VMs virtualize the hardware while Containers virtualize the OS.
+## [Azure functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview)
+- Azure Functions is an event-driven, serverless compute option that doesn’t require maintaining virtual machines or containers.
+- With Azure Functions, an event wakes the function, alleviating the need to keep resources provisioned when there are no events.
+- Functions are commonly used when you need to perform work in response to an event (often via a REST request), timer, or message from another Azure service, and when that work can be completed quickly, within seconds or less.
+- Azure Functions runs your code when it's triggered and automatically deallocates resources when the function is finished.
+- Functions can be either stateless or stateful:
+  - When they're stateless (the default), they behave as if they're restarted every time they respond to an event. 
+  - When they're stateful (called Durable Functions), a context is passed through the function to track prior activity.
+## [Azure App Service](https://learn.microsoft.com/en-us/azure/app-service/overview)
+- App Service enables you to build and host web apps, background jobs, mobile back-ends, and RESTful APIs in the programming language of your choice without managing infrastructure.
+- It enables automated deployments from GitHub, Azure DevOps, or any Git repo to support a continuous deployment model.
+- Azure App Service is an HTTP-based service for hosting web applications, REST APIs, and mobile back ends. It supports multiple languages, including .NET, .NET Core, Java, Ruby, Node.js, PHP, or Python. It also supports both Windows and Linux environments.
+- Types of App Services:
+  - Web apps 
+  - API apps 
+  - WebJobs 
+  - Mobile apps
 
+## [Azure virtual networking](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview)
+- Azure virtual networks provide the following key networking capabilities:
+  - Isolation and segmentation 
+  - Internet communications 
+    - Assigning a [public IP address](https://phoenixnap.com/kb/public-vs-private-ip-address) to an Azure resource
+    - Putting the resource behind a [public load balancer](https://learn.microsoft.com/en-us/azure/load-balancer/quickstart-load-balancer-standard-public-portal)
+  - Communicate between Azure resources 
+  - Communicate with on-premises resources 
+    - [Point-to-site virtual private network](https://learn.microsoft.com/en-us/azure/vpn-gateway/point-to-site-about)
+    - [Site-to-site virtual private networks](https://learn.microsoft.com/en-us/azure/vpn-gateway/tutorial-site-to-site-portal)
+    - [Azure ExpressRoute](https://learn.microsoft.com/en-us/azure/expressroute/)
+  - Route network traffic 
+    - [Route Tables](https://www.geeksforgeeks.org/routing-tables-in-computer-network/)
+    - [Border Gateway Protocol (BGP)](https://www.enterprisenetworkingplanet.com/standards-protocols/bgp-routing/)
+  - Filter network traffic 
+    - [Network security groups](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview)
+    - [Network Virtual Appliances](https://learn.microsoft.com/en-us/azure/virtual-wan/about-nva-hub)
+  - Connect virtual networks
+    - [Virtual network peering](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview)
+## [Exercise - Configure network access](https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/9-exercise-configure-network-access)
+## [Azure virtual private networks](https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/10-virtual-private-networks)
+- A virtual private network (VPN) uses an encrypted tunnel within another network. 
+- VPNs are typically deployed to connect two or more trusted private networks to one another over an untrusted network (typically the public internet). 
+- Traffic is encrypted while traveling over the untrusted network to prevent eavesdropping or other attacks. 
+- VPNs can enable networks to safely and securely share sensitive information.
 
+### [VPN gateways](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways)
+- Azure VPN Gateway instances are deployed in a dedicated subnet of the virtual network and enable the following connectivity:
+  - Connect on-premises datacenters to virtual networks through a site-to-site connection. 
+  - Connect individual devices to virtual networks through a point-to-site connection. 
+  - Connect virtual networks to other virtual networks through a network-to-network connection.
+- You can deploy only one VPN gateway in each virtual network. However, you can use one gateway to connect to multiple locations, which includes other virtual networks or on-premises datacenters.
+- 
 
 
 
