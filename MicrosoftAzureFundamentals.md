@@ -193,7 +193,100 @@
   - Connect individual devices to virtual networks through a point-to-site connection. 
   - Connect virtual networks to other virtual networks through a network-to-network connection.
 - You can deploy only one VPN gateway in each virtual network. However, you can use one gateway to connect to multiple locations, which includes other virtual networks or on-premises datacenters.
-- 
+- VPN Gateway Types:
+  - **Policy-based VPN gateways** specify statically the IP address of packets that should be encrypted through each tunnel. This type of device evaluates every data packet against those sets of IP addresses to choose the tunnel where that packet is going to be sent through. 
+  - In **Route-based gateways**, IPSec tunnels are modeled as a network interface or virtual tunnel interface. IP routing (either static routes or dynamic routing protocols) decides which one of these tunnel interfaces to use when sending each packet. Route-based VPNs are the preferred connection method for on-premises devices. They're more resilient to topology changes such as the creation of new subnets.
+### High-availability scenarios
+- Active/standby
+- [Active/Active](https://learn.microsoft.com/en-us/azure/vpn-gateway/active-active-portal)
+- [ExpressRoute failover](https://learn.microsoft.com/en-us/azure/expressroute/designing-for-disaster-recovery-with-expressroute-privatepeering)
+- [Zone-redundant gateways](https://learn.microsoft.com/en-us/azure/vpn-gateway/create-zone-redundant-vnet-gateway)
+
+## [Azure ExpressRoute](https://learn.microsoft.com/en-us/azure/expressroute/expressroute-introduction)
+- Azure ExpressRoute lets you extend your on-premises networks into the Microsoft cloud over a private connection, with the help of a connectivity provider. This connection is called an **ExpressRoute Circuit**.
+- ExpressRoute connections don't go over the public Internet.
+- **Features and benefits of ExpressRoute:**
+  - Connectivity to Microsoft cloud services across all regions in the geopolitical region. 
+  - Global connectivity to Microsoft services across all regions with the ExpressRoute Global Reach. 
+  - Dynamic routing between your network and Microsoft via Border Gateway Protocol (BGP). 
+  - Built-in redundancy in every peering location for higher reliability.
+- [ExpressRoute connectivity models](https://learn.microsoft.com/en-us/azure/expressroute/expressroute-connectivity-models):
+  - CloudExchange colocation 
+  - Point-to-point Ethernet connection 
+  - Any-to-any connection 
+  - Directly from ExpressRoute sites
+  - ![ExpressRouteConnecctivity](ExpressRouteConnecctivity.png)
+
+## [Azure DNS](https://learn.microsoft.com/en-us/azure/dns/)
+- Azure DNS is a hosting service for DNS domains that provides name resolution by using Microsoft Azure infrastructure. 
+- By hosting your domains in Azure, you can manage your DNS records using the same credentials, APIs, tools, and billing as your other Azure services.
+- **You can't use Azure DNS to buy a domain name. For an annual fee, you can buy a domain name by using App Service domains or a third-party domain name registrar. Once purchased, your domains can be hosted in Azure DNS for record management.**
+
+# [Describe Azure storage services](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction)
+
+## [Azure storage accounts](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview)
+- A storage account provides a unique namespace for your Azure Storage data that's accessible from anywhere in the world over HTTP or HTTPS.
+- The type of account determines the storage services and redundancy options and has an impact on the use cases.
+- ![StorageAccountTypes](StorageAccountTypes.png)
+- Redundancy options:
+  - Locally redundant storage (LRS)
+  - Geo-redundant storage (GRS)
+  - Read-access geo-redundant storage (RA-GRS)
+  - Zone-redundant storage (ZRS)
+  - Geo-zone-redundant storage (GZRS)
+  - Read-access geo-zone-redundant storage (RA-GZRS)
+- Every storage account in Azure must have a unique-in-Azure account name
+### [Storage account endpoints](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview#storage-account-endpoints)
+- The combination of the account name and the Azure Storage service endpoint forms the endpoints for your storage account.
+- ![StorageAccountEndpointFormat](StorageAccountEndpointFormat.png)
+- When naming your storage account, keep these rules in mind:
+  - Storage account names must be between 3 and 24 characters in length and may contain numbers and lowercase letters only. 
+  - Your storage account name must be unique within Azure. No two storage accounts can have the same name. This supports the ability to have a unique, accessible namespace in Azure.
+## [Azure storage redundancy](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy)
+- Redundancy ensures that your storage account meets its availability and durability targets even in the face of failures.
+- When deciding which redundancy option is best for your scenario, consider the tradeoffs between lower costs and higher availability.
+
+### Redundancy in the primary region
+- Data in an Azure Storage account is always replicated three times in the primary region.
+- Two Options:
+  - **Locally redundant storage (LRS):**
+    - Replicates your data three times within a single data center in the primary region. 
+    - LRS provides at least 11 nines of durability (99.999999999%) of objects over a given year.
+    - LRS is the lowest-cost redundancy option and offers the least durability compared to other options. 
+    - LRS protects your data against server rack and drive failures.
+    - ![LRS](LRS.png)
+  - **Zone-redundant storage (ZRS):**
+    - For Availability Zone-enabled Regions, zone-redundant storage (ZRS) replicates your Azure Storage data synchronously across three Azure availability zones in the primary region. 
+    - ZRS offers durability for Azure Storage data objects of at least 12 nines (99.9999999999%) over a given year.
+    - Microsoft recommends using ZRS in the primary region for scenarios that require high availability. 
+    - ZRS is also recommended for restricting replication of data within a country or region to meet data governance requirements.
+    - ![ZRS](ZRS.png)
+### Redundancy in a secondary region
+- When you create a storage account, you select the primary region for the account. The paired secondary region is based on Azure Region Pairs, and can't be changed.
+- By default, data in the secondary region isn't available for read or write access unless there's a failover to the secondary region.
+- **Because data is replicated to the secondary region asynchronously, a failure that affects the primary region may result in data loss if the primary region can't be recovered. The interval between the most recent writes to the primary region and the last write to the secondary region is known as the recovery point objective (RPO). The RPO indicates the point in time to which data can be recovered. Azure Storage typically has an RPO of less than 15 minutes, although there's currently no SLA on how long it takes to replicate data to the secondary region.**
+- Azure Storage offers two options for copying your data to a secondary region: 
+  - **Geo-redundant storage (GRS):**
+    - GRS is similar to running LRS in two regions
+    - GRS copies your data synchronously three times within a single physical location in the primary region using LRS. It then copies your data asynchronously to a single physical location in the secondary region (the region pair) using LRS. 
+    - GRS offers durability for Azure Storage data objects of at least 16 nines (99.99999999999999%) over a given year.
+    - ![GRS](GRS.png)
+  - **Geo-zone-redundant storage (GZRS):**
+    - GZRS is similar to running ZRS in the primary region and LRS in the secondary region.
+    - GZRS combines the high availability provided by redundancy across availability zones with protection from regional outages provided by geo-replication. 
+    - Data in a GZRS storage account is copied across three Azure availability zones in the primary region (similar to ZRS) and is also replicated to a secondary geographic region, using LRS, for protection from regional disasters. 
+    - Microsoft recommends using GZRS for applications requiring maximum consistency, durability, and availability, excellent performance, and resilience for disaster recovery.
+    - GZRS is designed to provide at least 16 nines (99.99999999999999%) of durability of objects over a given year.
+    - ![GZRS](GZRS.png)
+- **Read access to data in the secondary region**
+  - Geo-redundant storage (with GRS or GZRS) replicates your data to another physical location in the secondary region to protect against regional outages. However, that data is available to be read only if the customer or Microsoft initiates a **failover** from the primary to secondary region. However, if you enable read access to the secondary region, your data is always available, even when the primary region is running optimally. For read access to the secondary region, enable read-access geo-redundant storage (RA-GRS) or read-access geo-zone-redundant storage (RA-GZRS).
+- **Remember that the data in your secondary region may not be up-to-date due to RPO.**
+
+## [Azure storage services](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction)
+
+
+
+
 
 
 
