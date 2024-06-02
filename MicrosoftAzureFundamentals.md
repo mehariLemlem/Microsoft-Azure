@@ -282,8 +282,30 @@
   - Geo-redundant storage (with GRS or GZRS) replicates your data to another physical location in the secondary region to protect against regional outages. However, that data is available to be read only if the customer or Microsoft initiates a **failover** from the primary to secondary region. However, if you enable read access to the secondary region, your data is always available, even when the primary region is running optimally. For read access to the secondary region, enable read-access geo-redundant storage (RA-GRS) or read-access geo-zone-redundant storage (RA-GZRS).
 - **Remember that the data in your secondary region may not be up-to-date due to RPO.**
 
-## [Azure storage services](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction)
+## [**Azure storage services**](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction)
+- [**Azure Blobs**](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction): A massively scalable object store for text and binary data. Also includes support for big data analytics through Data Lake Storage Gen2.
+  - Object Storage, Unstructured 
+  - Massive data (Text, Binary, Image, Video)
+  - **Access tiers** (Availability, Storage cost, Access cost):
+    - [**Hot access tier**](https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview): Optimized for storing data that is accessed frequently (for example, images for your website). 
+    - [**Cool access tier**](https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview): Optimized for data that is infrequently accessed and stored for at least 30 days (for example, invoices for your customers). 
+    - [**Cold access tier**](https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview): Optimized for storing data that is infrequently accessed and stored for at least 90 days. 
+    - [**Archive access tier**](https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview): Appropriate for data that is rarely accessed and stored for at least 180 days, with flexible latency requirements (for example, long-term backups).
+  - Hot and cool access tiers can be set at the account level. The cold and archive access tiers aren't available at the account level. 
+  - Hot, cool, cold, and archive tiers can be set at the blob level, during or after upload.
+- [**Azure Files**](https://learn.microsoft.com/en-us/azure/storage/files/?source=recommendations): Managed file shares for cloud or on-premises deployments.
+  - Accessible via:
+    - **Server Message Block (SMB)**: Windows, Linux, macOS 
+    - **Network File System (NFS)**: Linux, macOS
+- [**Azure Queues**](https://learn.microsoft.com/en-us/azure/storage/queues/?source=recommendations): A messaging store for reliable messaging between application components.
+- [**Azure Disks**](https://learn.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview): Block-level storage volumes for Azure VMs.
+- [**Azure Tables**](https://learn.microsoft.com/en-us/azure/storage/tables/?source=recommendations): NoSQL table option for structured, non-relational data.
+## [Exercise - Create a storage blob](https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/5-exercise-create-storage-blob)
+- Create a storage account
+- Work with blob storage
+- Change the access level of your blob
 
+## [Azure data migration options](https://learn.microsoft.com/en-us/azure/migrate/migrate-services-overview)
 
 
 
