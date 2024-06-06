@@ -1,4 +1,4 @@
-# [Describe cloud computing](https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/)
+# [Module-1: Describe cloud computing](https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/)
 ## [Shared Responsibility Model](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility)
 ![SharedResponsibilityModel](SharedResponsibilityModel.png)
 
@@ -23,7 +23,7 @@
   - The ability to stop paying for resources that are no longer needed.
 - [Pay-as-you-go pricing model](https://learn.microsoft.com/en-us/power-platform/admin/pay-as-you-go-overview)
 
-# [Describe the benefits of using cloud services](https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/)
+# [Module-2: Describe the benefits of using cloud services](https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/)
 ## [High availability](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/infrastructure/iaas-high-availability-disaster-recovery)
 - [SLAs](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services)
 - Available when needed
@@ -39,14 +39,14 @@
 ## Security and Governance
 ## Manageability
 
-# [Describe cloud service types](https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/)
+# [Module-3: Describe cloud service types](https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/)
 [Shared Responsibility Model](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility)
 ![SharedResponsibilityModel](SharedResponsibilityModel.png)
 - [IaaS](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-iaas/)
 - [PaaS](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-paas/)
 - [SaaS](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-saas/)
 
-# [Describe the core architectural components of Azure](https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/)
+# [Module-4: Describe the core architectural components of Azure](https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/)
 - [Azure accounts](https://learn.microsoft.com/en-us/dotnet/azure/create-azure-account)
   - ![AzureAccount](AzureAccount.png)
 
@@ -115,7 +115,7 @@
     - Each management group and subscription can support only one parent.
 ![ManagementHierarchy](ManagementHierarchy.png)
 
-# [Describe Azure compute and networking services](https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/)
+# [Module-5: Describe Azure compute and networking services](https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/)
 ## [Azure virtual machines](https://learn.microsoft.com/en-us/azure/virtual-machines/overview)
 - An **image** is a template used to create a VM and may already include an OS and other software, like development tools or web hosting environments.
 ### [Virtual machine scale sets](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/?source=recommendations)
@@ -222,7 +222,7 @@
 - By hosting your domains in Azure, you can manage your DNS records using the same credentials, APIs, tools, and billing as your other Azure services.
 - **You can't use Azure DNS to buy a domain name. For an annual fee, you can buy a domain name by using App Service domains or a third-party domain name registrar. Once purchased, your domains can be hosted in Azure DNS for record management.**
 
-# [Describe Azure storage services](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction)
+# [Module-6: Describe Azure storage services](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction)
 
 ## [Azure storage accounts](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview)
 - A storage account provides a unique namespace for your Azure Storage data that's accessible from anywhere in the world over HTTP or HTTPS.
@@ -306,13 +306,149 @@
 - Change the access level of your blob
 
 ## [Azure data migration options](https://learn.microsoft.com/en-us/azure/migrate/migrate-services-overview)
+### [Azure Migrate](https://learn.microsoft.com/en-us/azure/migrate/migrate-services-overview)
+### [Azure Data Box](https://learn.microsoft.com/en-us/azure/databox/data-box-overview)
+
+## Azure file movement options
+- [AzCopy](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10#Overview)
+  - Synchronizing blobs or files with AzCopy is one-direction synchronization. When you synchronize, you designated the source and destination, and AzCopy will copy files or blobs in that direction. It doesn't synchronize bi-directionally based on timestamps or other metadata.
+- [Azure Storage Explorer](https://learn.microsoft.com/en-us/azure/storage/storage-explorer/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows)
+- [Azure File Sync](https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-introduction)
+  - Azure File Sync maintains a bidirectional synchronization of files between your on-premises and cloud Windows servers.
+
+# [Module-7: **Describe Azure identity, access, and security**](https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/)
+## Azure directory services
+- [Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/fundamentals/whatis)
+  - Provides services such us:
+    - Authentication
+    - Single Sign-on (SSO)
+    - Application management
+    - Device management
+- [Microsoft Entra Domain Services](https://learn.microsoft.com/en-us/entra/identity/domain-services/overview)
+
+## [Azure authentication methods](https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-methods)
+- Standard passwords
+- [**single sign-on**](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/what-is-single-sign-on)
+  - Single sign-on is only as secure as the initial authenticator because the subsequent connections are all based on the security of the initial authenticator.
+- [Multifactor authentication (MFA)](https://support.microsoft.com/en-us/topic/what-is-multifactor-authentication-e5e39437-121c-be60-d123-eda06bddf661)
+  - [Microsoft Entra multifactor authentication](https://learn.microsoft.com/en-us/entra/identity/authentication/concept-mfa-howitworks)
+- [Passwordless](https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-passwordless)
+  - Windows Hello for Business 
+  - Microsoft Authenticator app 
+  - FIDO2 security keys
+- ![AuthenticationSecurity](AuthenticationSecurity.png)
+
+## [Azure external identities](https://learn.microsoft.com/en-us/entra/external-id/external-identities-overview)
+- The external user’s identity provider manages their identity, and you manage access to your apps with Microsoft Entra ID or Azure AD B2C to keep your resources protected.
+- [**Business to business (B2B) collaboration**](https://techcommunity.microsoft.com/t5/microsoft-365-blog/introducing-azure-active-directory-b2b-collaboration/ba-p/62021) - Collaborate with external users by letting them use their preferred identity to sign-in to your Microsoft applications or other enterprise applications (SaaS apps, custom-developed apps, etc.). B2B collaboration users are represented in your directory, typically as guest users. 
+- [**B2B direct connect**](https://learn.microsoft.com/en-us/entra/external-id/b2b-direct-connect-overview) - Establish a mutual, two-way trust with another Microsoft Entra organization for seamless collaboration. B2B direct connect currently supports Teams shared channels, enabling external users to access your resources from within their home instances of Teams. B2B direct connect users aren't represented in your directory, but they're visible from within the Teams shared channel and can be monitored in Teams admin center reports. 
+- [**Microsoft Azure Active Directory business to customer (B2C)**](https://learn.microsoft.com/en-us/azure/active-directory-b2c/overview) - Publish modern SaaS apps or custom-developed apps (excluding Microsoft apps) to consumers and customers, while using Azure AD B2C for identity and access management.
+- ![AzureADExternalIdentities](AzureADExternalIdentities.png)
+
+## [Azure conditional access](https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview)
+- Conditional Access is a tool that Microsoft Entra ID uses to allow (or deny) access to resources based on identity signals.
+- During sign-in, Conditional Access collects signals from the user, makes decisions based on those signals, and then enforces that decision by allowing or denying the access request or challenging for a multifactor authentication response.
+
+## [Azure role-based access control (Azure RBAC)](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+- Built-in roles
+- User-defined roles
+- Role-based access control is applied to a scope, which is a resource or set of resources that this access applies to.
+- Azure RBAC is hierarchical, in that when you grant access at a parent scope, those permissions are inherited by all child scopes.
+- ![RBAC](RBAC.png)
+
+## [Zero trust model](https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-overview)
+- Zero Trust is a security model that assumes the worst case scenario and protects resources with that expectation. Zero Trust assumes breach at the outset, and then verifies each request as though it originated from an uncontrolled network.
+- Guiding principles:
+  - **Verify explicitly** - Always authenticate and authorize based on all available data points. 
+  - **Use least privilege access** - Limit user access with Just-In-Time and Just-Enough-Access (JIT/JEA), risk-based adaptive policies, and data protection. 
+  - **Assume breach** - Minimize blast radius and segment access. Verify end-to-end encryption. Use analytics to get visibility, drive threat detection, and improve defenses.
+- ![ZeroTrustModel](ZeroTrustModel.png)
+
+## [Defense-in-depth](https://azure.microsoft.com/en-us/blog/microsoft-azures-defense-in-depth-approach-to-cloud-vulnerabilities/)
+- A defense-in-depth strategy uses a series of mechanisms to slow the advance of an attack that aims at acquiring unauthorized access to data.
+- ![DefenseInDepth](DefenseInDepth.png)
+- Each layer provides protection so that if one layer is breached, a subsequent layer is already in place to prevent further exposure.
+- Brief overview of each layer:
+  - **Physical Security:**
+    - protect computing hardware in the datacenter
+    - physical safeguards against access to assets
+  - **Identity and access:**
+    - controls access to infrastructure and change control
+    - Use single sign-on (SSO) and multifactor authentication
+    - Audit events and changes
+  - **Perimeter:**
+    - protects from network-based attacks against your resources
+    - uses distributed denial of service (DDoS) protection to filter large-scale attacks before they can cause a denial of service for users
+    - Use perimeter firewalls to identify and alert on malicious attacks against your network
+  - **Network:**
+    - limits communication between resources through segmentation and access controls
+    - Deny by default
+    - Restrict inbound internet access and limit outbound access where appropriate
+    - Implement secure connectivity to on-premises networks
+  - **Compute:**
+    - secures access to virtual machines
+    - Implement endpoint protection on devices and keep systems patched and current
+  - **Application:**
+    - helps ensure that applications are secure and free of security vulnerabilities
+    - Integrating security into the application development lifecycle helps reduce the number of vulnerabilities introduced in code.
+    - Every development team should ensure that its applications are **secure by default**
+    - Store sensitive application secrets in a secure storage medium
+    - Make security a design requirement for all application development
+  - **Data:**
+    - controls access to business and customer data that you need to protect
+    - regulatory requirements dictate the controls and processes that must be in place to ensure the confidentiality, integrity, and availability of the data.
+
+## [Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
+- Azure-native service
+- It monitors your cloud, on-premises, hybrid, and multi-cloud environments to provide guidance and notifications aimed at strengthening your security posture.
+- For hybrid and multi-cloud environments, Microsoft Defender plans are extended to non Azure machines with the help of **Azure Arc**.
+
+
+# [Module-8: **Describe cost management in Azure**](https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/)
+
+## [Factors that can affect costs in Azure](https://turbo360.com/blog/what-causes-azure-costs-to-increase)
+- [Plan to manage Azure costs](https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/plan-manage-costs)
+- Azure shifts development costs from the [capital expense (CapEx)](https://www.investopedia.com/terms/o/operating_expense.asp) of building out and maintaining infrastructure and facilities to an [operational expense (OpEx)](https://www.investopedia.com/terms/o/operating_expense.asp) of renting infrastructure as you need it
+- OpEx cost impacting factors:
+  - **Resource type**: Type, Setting, Region, Licensing 
+  - **Consumption**: Pay-as-you-go, Discount on reserved resource 
+  - **Maintenance**: keeping an eye on your resources, not keeping around resources that are no longer needed  
+  - **Geography**: Location/Region, Network traffic
+  - **Subscription type**: Pricing plan, Free trial 
+  - **Azure Marketplace**: third-party purchases
+## Compare the Pricing and Total Cost of Ownership calculators
+- [**Pricing calculator**](https://azure.microsoft.com/en-us/pricing/calculator/)
+  - Pricing calculator is designed to give you an estimated cost for provisioning resources in Azure.
+  - The Pricing calculator is for information purposes only. The prices are only an estimate. Nothing is provisioned when you add resources to the pricing calculator, and you won't be charged for any services you select.
+- [**Total cost of ownership (TCO) calculator**](https://azure.microsoft.com/en-us/pricing/tco/calculator/)
+  - TCO calculator is designed to help you compare the costs for running an on-premises infrastructure compared to an Azure Cloud infrastructure.
+
+## [Exercise - Estimate workload costs by using the Pricing calculator](https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/4-exercise-estimate-workload-costs-use-pricing-calculator)
+## [Exercise - Compare workload costs using the TCO calculator](https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/5-exercise-compare-workload-costs-use-total-cost-ownership-calculator)
+## [Microsoft Cost Management tool](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/?source=recommendations)
+- [**Cost Analysis**](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis?source=recommendations)
+- [**Cost Alerts**](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending)
+  - Budget alerts 
+  - Credit alerts 
+  - Department spending quota alerts
+- [**Budgets**](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/quick-create-budget-template)
+
+## [Describe the purpose of tags](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources-portal)
+- Tags provide extra information, or metadata, about your resources
+- You can add, modify, or delete resource tags through Windows PowerShell, the Azure CLI, Azure Resource Manager templates, the REST API, or the Azure portal.
+- Resources don't inherit tags from subscriptions and resource groups
+- Tag is useful for: 
+  - **Resource management** Tags enable you to locate and act on resources that are associated with specific workloads, environments, business units, and owners. 
+  - **Cost management and optimization** Tags enable you to group resources so that you can report on costs, allocate internal cost centers, track budgets, and forecast estimated cost. 
+  - **Operations management** Tags enable you to group resources according to how critical their availability is to your business. This grouping helps you formulate service-level agreements (SLAs). An SLA is an uptime or performance guarantee between you and your users. 
+  - **Security** Tags enable you to classify data by its security level, such as public or confidential. 
+  - **Governance and regulatory compliance** Tags enable you to identify resources that align with governance or regulatory compliance requirements, such as ISO 27001. Tags can also be part of your standards enforcement efforts. For example, you might require that all resources be tagged with an owner or department name. 
+  - **Workload optimization and automation** Tags can help you visualize all of the resources that participate in complex deployments. For example, you might tag a resource with its associated workload or application name and use software such as Azure DevOps to perform automated tasks on those resources.
 
 
 
 
-
-
-# [Describe features and tools in Azure for governance and compliance](https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/)
+# [Module-9: Describe features and tools in Azure for governance and compliance](https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/)
 [Microsoft Purview](https://learn.microsoft.com/en-us/purview/governance-solutions-overview)
 - Microsoft Purview's data governance solutions create one place for you to manage your on-premises, multicloud, and software-as-a-service (SaaS) data.
 - Two main solution areas comprise Microsoft Purview: risk and compliance and unified data governance.
@@ -344,7 +480,7 @@
 - To access some of the resources on the Service Trust Portal, you must sign in as an authenticated user with your Microsoft cloud services account (Microsoft Entra organization account). You'll need to review and accept the Microsoft non-disclosure agreement for compliance materials.
 
 
-# [Describe features and tools for managing and deploying Azure resources](https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/)
+# [Module-10: Describe features and tools for managing and deploying Azure resources](https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/)
 ## [Azure portal](https://learn.microsoft.com/en-us/azure/azure-portal/azure-portal-overview)
 - The Azure portal is a web-based, unified console that provides an alternative to command-line tools. With the Azure portal, you can manage your Azure subscription by using a graphical user interface.
 
@@ -386,7 +522,7 @@
 - While similar to an ARM template, which is written in JSON, Bicep files tend to use a simpler, more concise style.
 
 
-# [Describe monitoring tools in Azure](https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/)
+# [Module-11: Describe monitoring tools in Azure](https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/)
 ## [Azure Advisor](https://learn.microsoft.com/en-us/azure/advisor/)
 - Azure Advisor evaluates your Azure resources and makes recommendations to help improve reliability, security, and performance, achieve operational excellence, and reduce costs.
 - Recommendation categories:
